@@ -79,13 +79,13 @@ public class Colosseum {
         do {
             System.out.println("How many hit points will it have? (1-50): ");
             temp.hitPoints = sc.nextInt();
-        } while (temp.hitPoints >= 1 && temp.hitPoints <= MAX_HIT_POINTS);
+        } while (!(temp.hitPoints >= 1 && temp.hitPoints <= MAX_HIT_POINTS));
 
         do {
             System.out.println("Allocate 50 points to defence and attack: ");
             temp.defenseLevel = sc.nextInt();
             temp.attackLevel = sc.nextInt();
-        } while (temp.defenseLevel + temp.attackLevel <= 50 && temp.attackLevel >= 1 && temp.defenseLevel >= 1);
+        } while (!(temp.defenseLevel + temp.attackLevel <= 50 && temp.attackLevel >= 1 && temp.defenseLevel >= 1));
 
         return (temp);
     }
